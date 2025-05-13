@@ -30,11 +30,11 @@ const Index = () => {
       description: "Seu pedido será levado à Gruta de Lourdes"
     });
     
-    // Redirecionar após 5 segundos
+    // Redirect to loading page instead of confirmation
     setTimeout(() => {
-      navigate("/confirmacao");
+      navigate("/salvando");
       setIsSubmitting(false);
-    }, 5000);
+    }, 1500);
   };
 
   return (
