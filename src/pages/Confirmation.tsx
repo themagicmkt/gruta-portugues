@@ -55,8 +55,8 @@ const Confirmation = () => {
               Querido(a) Irmão(ã) em Cristo,
             </h3>
             
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-2/3">
+            <div className="flex flex-col gap-8">
+              <div>
                 <p className="text-lg mb-4 leading-relaxed">
                   Aqui é Matthew Miller, e escrevo a você hoje com grande alegria e esperança no coração. Por muitos anos, minha esposa e eu fomos abençoados por servir como voluntários na Gruta de Lourdes – um lugar onde milagres de cura acontecem todos os dias.
                 </p>
@@ -65,14 +65,12 @@ const Confirmation = () => {
                 </p>
               </div>
               
-              <div className="md:w-1/3 w-full">
-                <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1473177104440-ffee2f376098" 
-                    alt="Gruta de Lourdes" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1473177104440-ffee2f376098" 
+                  alt="Gruta de Lourdes" 
+                  className="w-full h-64 md:h-80 object-cover"
+                />
               </div>
             </div>
           </div>
@@ -139,8 +137,8 @@ const Confirmation = () => {
               O Que Torna Lourdes Tão Extraordinária?
             </h3>
             
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-2/3">
+            <div className="flex flex-col gap-8">
+              <div>
                 <p className="text-lg mb-4 leading-relaxed">
                   Lourdes é reconhecida no mundo inteiro como um santuário de cura, onde os doentes buscam alívio e restauração. Todos os dias, vejo a fé transformar vidas neste lugar. Seja por cura física, paz interior ou renovação espiritual, a presença da Virgem Maria pode ser sentida em cada canto deste sagrado local.
                 </p>
@@ -150,14 +148,12 @@ const Confirmation = () => {
                 </p>
               </div>
               
-              <div className="md:w-1/3 w-full">
-                <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" 
-                    alt="Rio entre montanhas" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" 
+                  alt="Rio entre montanhas" 
+                  className="w-full h-64 md:h-80 object-cover"
+                />
               </div>
             </div>
           </div>
@@ -185,18 +181,16 @@ const Confirmation = () => {
               Está Pronto para Sentir o Poder Curador de Lourdes?
             </h3>
             
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/3 w-full">
-                <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9" 
-                    alt="Árvores de pinheiro" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+            <div className="flex flex-col gap-8">
+              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9" 
+                  alt="Árvores de pinheiro" 
+                  className="w-full h-64 md:h-80 object-cover"
+                />
               </div>
               
-              <div className="md:w-2/3">
+              <div>
                 <p className="text-lg leading-relaxed">
                   Não há nada como a paz e a cura que tomam conta do coração quando confiamos nossas preces a Lourdes. Seja por cura física, restauração espiritual ou alívio emocional, este local santo tem o poder de renovar pela graça de Deus.
                 </p>
