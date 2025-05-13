@@ -60,7 +60,7 @@ const Confirmation = () => {
             <div className="flex flex-col gap-8">
               <div>
                 <p className="text-lg mb-4 leading-relaxed">
-                  Aqui é Matthew Miller, e escrevo a você hoje com grande alegria e esperança no coração. Por muitos anos, minha esposa e eu fomos abençoados por servir como voluntários na Gruta de Lourdes – um lugar onde milagres de cura acontecem todos os dias.
+                  Aqui é o Padre Afonso Freitas, e escrevo a você hoje com grande alegria e esperança no coração. Por muitos anos, minha esposa e eu fomos abençoados por servir como voluntários na Gruta de Lourdes – um lugar onde milagres de cura acontecem todos os dias.
                 </p>
                 <p className="text-lg mb-4 leading-relaxed">
                   Sempre que estou diante da Gruta, fico comovido com os testemunhos de pessoas que encontraram cura, paz e restauração no corpo e no espírito. Esse local sagrado, onde a Santíssima Virgem Maria apareceu, é conhecido em todo o mundo por seu poder divino de curar. Pela graça de Deus, temos o privilégio de levar suas orações até esse lugar milagroso.
