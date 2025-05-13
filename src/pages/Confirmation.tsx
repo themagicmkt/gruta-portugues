@@ -4,15 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { OrderBumpPopup } from "@/components/OrderBumpPopup";
 
 const Confirmation = () => {
-  const [showOrderBump, setShowOrderBump] = useState(false);
-
-  const handleButtonClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setShowOrderBump(true);
-  };
 
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans">
@@ -233,11 +226,10 @@ const Confirmation = () => {
                     "Por favor, levem minha oração até Lourdes. No momento, não consigo arcar com o valor completo, mas desejo participar deste ato sagrado."
                   </p>
                   
-                  <Button 
-                    className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-                    onClick={handleButtonClick}
-                  >
-                    Incluir minha oração por R$28
+                  <Button className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
+                    <a href="https://pay.voluntarios-de-lourdes.online/PVYB34eeB1lZKzk" target="_blank" rel="noopener noreferrer">
+                      Incluir minha oração
+                    </a>
                   </Button>
                   
                   <p className="text-xs mt-3 text-center text-gray-500">
@@ -263,11 +255,10 @@ const Confirmation = () => {
                     "Estou cobrindo o custo total para levar minha oração à Gruta. Obrigado por tornar isso possível."
                   </p>
                   
-                  <Button 
-                    className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-                    onClick={handleButtonClick}
-                  >
-                    Entrega Completa da Oração por R$35
+                  <Button className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
+                    <a href="https://pay.voluntarios-de-lourdes.online/YL9jZDWWBJy3p4q" target="_blank" rel="noopener noreferrer">
+                      Entrega Completa da Oração
+                    </a>
                   </Button>
                   
                   <p className="text-xs mt-3 text-center text-gray-500">
@@ -290,11 +281,10 @@ const Confirmation = () => {
                     "Quero contribuir um pouco mais para ajudar outra pessoa que talvez não possa. Que minha oração e minha doação tragam bênçãos a quem precisa."
                   </p>
                   
-                  <Button 
-                    className="w-full bg-[#f4d58d] hover:bg-[#e3c47c] text-[#333333] px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-                    onClick={handleButtonClick}
-                  >
-                    Enviar e Ajudar por R$55
+                  <Button className="w-full bg-[#f4d58d] hover:bg-[#e3c47c] text-[#333333] px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
+                    <a href="https://pay.voluntarios-de-lourdes.online/v7R0glooeKeGVr9" target="_blank" rel="noopener noreferrer">
+                      Enviar e Ajudar
+                    </a>
                   </Button>
                   
                   <p className="text-xs mt-3 text-center text-gray-500">
@@ -347,13 +337,13 @@ const Confirmation = () => {
               <h4 className="font-playfair text-xl mb-4 text-white">Links Importantes</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/termos" className="text-sm hover:text-[#f4d58d] transition-colors" onClick={handleButtonClick}>Termos e Condições</Link>
+                  <Link to="/termos" className="text-sm hover:text-[#f4d58d] transition-colors">Termos e Condições</Link>
                 </li>
                 <li>
-                  <Link to="/privacidade" className="text-sm hover:text-[#f4d58d] transition-colors" onClick={handleButtonClick}>Política de Privacidade</Link>
+                  <Link to="/privacidade" className="text-sm hover:text-[#f4d58d] transition-colors">Política de Privacidade</Link>
                 </li>
                 <li>
-                  <Link to="/contato" className="text-sm hover:text-[#f4d58d] transition-colors" onClick={handleButtonClick}>Fale Conosco</Link>
+                  <Link to="/contato" className="text-sm hover:text-[#f4d58d] transition-colors">Fale Conosco</Link>
                 </li>
               </ul>
               <div className="mt-8">
@@ -363,20 +353,11 @@ const Confirmation = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <Button 
-              asChild
-              variant="outline"
-              className="text-white border-white/20 hover:bg-white/10"
-              onClick={handleButtonClick}
-            >
-              <Link to="#">Finalizar Pedido</Link>
-            </Button>
+            
           </div>
         </div>
       </footer>
 
-      {/* Order Bump Popup */}
-      <OrderBumpPopup open={showOrderBump} onOpenChange={setShowOrderBump} />
     </div>
   );
 };
