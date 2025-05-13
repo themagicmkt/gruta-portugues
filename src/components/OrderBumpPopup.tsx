@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Checkbox } from "@/components/ui/checkbox";
 import { X } from "lucide-react";
@@ -28,24 +27,18 @@ export const OrderBumpPopup = ({ open, onOpenChange }: OrderBumpPopupProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-white rounded-xl p-6 max-w-md w-full">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-playfair font-semibold text-[#333333]">
-            Gostaria de adicionar o acendimento de uma vela pela sua oração por R$8?
-          </h2>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="h-8 w-8"
-            onClick={() => onOpenChange(false)}
-          >
-            <X className="h-4 w-4" />
-            <span className="sr-only">Fechar</span>
-          </Button>
+          <DialogTitle asChild>
+            <h2 className="text-2xl font-playfair font-semibold text-[#333333]">
+              Gostaria de adicionar o acendimento de uma vela pela sua oração por R$8?
+            </h2>
+          </DialogTitle>
+          <div></div>
         </div>
         
         <div className="mb-6">
           <AspectRatio ratio={16/9} className="bg-gray-100 rounded-lg overflow-hidden">
             <img
-              src="/img03.webp"
+              src="/velas.webp"
               alt="Capela com velas acesas"
               className="w-full h-full object-cover"
             />
