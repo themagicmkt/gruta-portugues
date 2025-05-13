@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -93,9 +96,29 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
   }
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-blue-50 {
+    background-color: #ebf5f6;
   }
 }
