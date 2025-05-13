@@ -104,6 +104,15 @@ const Index = () => {
                 Se você preencher o formulário abaixo, levaremos sua oração pessoalmente na próxima visita. 
                 Você receberá fotos por e-mail como prova de que sua oração foi entregue neste local sagrado.
               </p>
+              
+              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1500673922987-e212871fec22" 
+                  alt="Gruta de Lourdes" 
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+              </div>
+              
               <div className="flex justify-center">
                 <Button 
                   asChild
@@ -118,143 +127,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Como Funciona */}
-        <section id="como-funciona" className="py-16 md:py-24 px-4 bg-blue-50">
-          <div className="container mx-auto max-w-5xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-12 text-center text-[#333333]">Como Funciona</h3>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
-                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
-                  <BookText className="text-[#5f9ea0]" size={32} />
-                </div>
-                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 1</h4>
-                <p className="text-center">Imprimimos sua oração com carinho. Sua oração será cuidadosamente impressa em uma nota especial.</p>
-              </div>
-              
-              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
-                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
-                  <MapPin className="text-[#5f9ea0]" size={32} />
-                </div>
-                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 2</h4>
-                <p className="text-center">Entregamos sua oração na Gruta de Lourdes. Na Gruta, a oração será colocada na Caixa de Pedidos, onde será feita uma bênção especial. Este momento sagrado será fotografado.</p>
-              </div>
-              
-              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
-                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
-                  <Mail className="text-[#5f9ea0]" size={32} />
-                </div>
-                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 3</h4>
-                <p className="text-center">Você recebe a confirmação. Você receberá as fotos da entrega diretamente no seu e-mail assim que chegarmos ao local na visita mensal.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Os Milagres Esperam por Você */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-4xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Os Milagres Esperam por Você</h3>
-            <p className="text-lg mb-6 leading-relaxed">
-              Ao enviar sua oração à Gruta de Lourdes, você se une a milhares de pessoas que já buscaram a graça divina nesse santuário. 
-              Tenha conforto ao saber que sua prece foi colocada em um lugar tocado pela Virgem Maria, onde milagres são parte da rotina.
-            </p>
-            <p className="text-lg mb-8 leading-relaxed">
-              Seja você alguém em busca de cura, paz, amor ou clareza, entregar sua oração em Lourdes é um gesto espiritual profundo. 
-              Esse momento sagrado ficará com você para sempre, como prova de que fez algo extraordinário para honrar a Deus.
-            </p>
-            <div className="flex justify-center">
-              <Button 
-                asChild
-                className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-              >
-                <a href="#formulario">
-                  ➡️ Enviar Minha Oração Agora
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Viva as Bênçãos de Lourdes */}
-        <section className="py-16 px-4 bg-gradient-to-b from-blue-50 to-white">
-          <div className="container mx-auto max-w-4xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Viva as Bênçãos de Lourdes Sem Sair de Casa</h3>
-            <p className="text-lg mb-8 text-center leading-relaxed">
-              Você não precisa viajar até Lourdes para receber as bênçãos deste lugar sagrado. 
-              Ao permitir que levemos sua oração, você economiza tempo e dinheiro, e ainda assim recebe os benefícios espirituais desse local santo.
-            </p>
-          </div>
-        </section>
-
-        {/* Compartilhe as Bênçãos */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-4xl">
-            <div className="bg-[#5f9ea0]/5 border border-[#5f9ea0]/10 p-8 rounded-xl shadow-sm">
-              <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">Compartilhe as Bênçãos com Quem Você Ama</h3>
-              <p className="text-lg mb-6 text-center leading-relaxed">
-                Se você não precisa de um milagre agora, envie uma oração por alguém que precisa. 
-                Ofereça esse gesto de amor a um ente querido e permita que a graça divina alcance a vida dele também.
-              </p>
-              <div className="flex justify-center">
-                <Button 
-                  asChild
-                  className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-                >
-                  <a href="#formulario">
-                    ➡️ Enviar Oração por um Ente Querido
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Por Que a Gruta de Lourdes */}
-        <section id="por-que-lourdes" className="py-16 px-4 bg-blue-50">
-          <div className="container mx-auto max-w-4xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Por Que a Gruta de Lourdes?</h3>
-            <Card className="border-[#f4d58d]/30 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex justify-center mb-8">
-                  <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Heart className="text-[#5f9ea0]" size={48} />
-                  </div>
-                </div>
-                <p className="text-lg mb-0 leading-relaxed text-center">
-                  Há mais de um século, a Gruta de Lourdes tem sido destino de peregrinação, 
-                  conhecida por suas curas milagrosas e pela forte conexão espiritual. 
-                  Peregrinos relatam transformações profundas após visitarem o local. 
-                  Agora você também pode ter sua oração colocada diretamente nesse espaço sagrado.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* CTA Principal */}
-        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-blue-50">
-          <div className="container mx-auto text-center max-w-4xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-6 text-[#333333]">
-              Receba o Presente dos Milagres Hoje Mesmo
-            </h3>
-            <p className="text-lg mb-8 max-w-3xl mx-auto">
-              Coloque sua oração na Gruta de Lourdes e confie no poder da intervenção divina. 
-              Sua oração, entregue pessoalmente, fará parte da tradição sagrada desse lugar santo.
-            </p>
-            <Button 
-              asChild
-              className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-            >
-              <a href="#formulario">
-                ➡️ Enviar Minha Oração à Gruta de Lourdes
-              </a>
-            </Button>
-          </div>
-        </section>
-
-        {/* Formulário de Oração */}
-        <section id="formulario" className="py-16 px-4 bg-white">
+        {/* Formulário de Oração - Movido para a terceira seção */}
+        <section id="formulario" className="py-16 px-4 bg-blue-50">
           <div className="container mx-auto max-w-3xl">
             <h3 className="text-3xl font-playfair font-semibold mb-10 text-center text-[#333333]">
               Envie Sua Oração à Gruta de Lourdes
@@ -324,6 +198,158 @@ const Index = () => {
                 </form>
               </CardContent>
             </Card>
+          </div>
+        </section>
+
+        {/* Como Funciona */}
+        <section id="como-funciona" className="py-16 md:py-24 px-4 bg-white">
+          <div className="container mx-auto max-w-5xl">
+            <h3 className="text-3xl font-playfair font-semibold mb-12 text-center text-[#333333]">Como Funciona</h3>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
+                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
+                  <BookText className="text-[#5f9ea0]" size={32} />
+                </div>
+                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 1</h4>
+                <p className="text-center">Imprimimos sua oração com carinho. Sua oração será cuidadosamente impressa em uma nota especial.</p>
+              </div>
+              
+              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
+                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
+                  <MapPin className="text-[#5f9ea0]" size={32} />
+                </div>
+                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 2</h4>
+                <p className="text-center">Entregamos sua oração na Gruta de Lourdes. Na Gruta, a oração será colocada na Caixa de Pedidos, onde será feita uma bênção especial. Este momento sagrado será fotografado.</p>
+              </div>
+              
+              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
+                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
+                  <Mail className="text-[#5f9ea0]" size={32} />
+                </div>
+                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 3</h4>
+                <p className="text-center">Você recebe a confirmação. Você receberá as fotos da entrega diretamente no seu e-mail assim que chegarmos ao local na visita mensal.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Os Milagres Esperam por Você */}
+        <section className="py-16 px-4 bg-blue-50">
+          <div className="container mx-auto max-w-4xl">
+            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Os Milagres Esperam por Você</h3>
+            <p className="text-lg mb-6 leading-relaxed">
+              Ao enviar sua oração à Gruta de Lourdes, você se une a milhares de pessoas que já buscaram a graça divina nesse santuário. 
+              Tenha conforto ao saber que sua prece foi colocada em um lugar tocado pela Virgem Maria, onde milagres são parte da rotina.
+            </p>
+            <p className="text-lg mb-8 leading-relaxed">
+              Seja você alguém em busca de cura, paz, amor ou clareza, entregar sua oração em Lourdes é um gesto espiritual profundo. 
+              Esse momento sagrado ficará com você para sempre, como prova de que fez algo extraordinário para honrar a Deus.
+            </p>
+            <div className="flex justify-center">
+              <Button 
+                asChild
+                className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+              >
+                <a href="#formulario">
+                  ➡️ Enviar Minha Oração Agora
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Viva as Bênçãos de Lourdes */}
+        <section className="py-16 px-4 bg-gradient-to-b from-white to-blue-50">
+          <div className="container mx-auto max-w-4xl">
+            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Viva as Bênçãos de Lourdes Sem Sair de Casa</h3>
+            <p className="text-lg mb-8 text-center leading-relaxed">
+              Você não precisa viajar até Lourdes para receber as bênçãos deste lugar sagrado. 
+              Ao permitir que levemos sua oração, você economiza tempo e dinheiro, e ainda assim recebe os benefícios espirituais desse local santo.
+            </p>
+            
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" 
+                alt="Paisagem serena representando bênçãos de Lourdes" 
+                className="w-full h-64 md:h-80 object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Compartilhe as Bênçãos */}
+        <section className="py-16 px-4 bg-white">
+          <div className="container mx-auto max-w-4xl">
+            <div className="bg-[#5f9ea0]/5 border border-[#5f9ea0]/10 p-8 rounded-xl shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">Compartilhe as Bênçãos com Quem Você Ama</h3>
+              <p className="text-lg mb-6 text-center leading-relaxed">
+                Se você não precisa de um milagre agora, envie uma oração por alguém que precisa. 
+                Ofereça esse gesto de amor a um ente querido e permita que a graça divina alcance a vida dele também.
+              </p>
+              <div className="flex justify-center">
+                <Button 
+                  asChild
+                  className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+                >
+                  <a href="#formulario">
+                    ➡️ Enviar Oração por um Ente Querido
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Por Que a Gruta de Lourdes */}
+        <section id="por-que-lourdes" className="py-16 px-4 bg-blue-50">
+          <div className="container mx-auto max-w-4xl">
+            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Por Que a Gruta de Lourdes?</h3>
+            
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1473177104440-ffee2f376098" 
+                alt="Interior de catedral representando a Gruta de Lourdes" 
+                className="w-full h-64 md:h-80 object-cover"
+              />
+            </div>
+            
+            <Card className="border-[#f4d58d]/30 shadow-lg">
+              <CardContent className="p-8">
+                <div className="flex justify-center mb-8">
+                  <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Heart className="text-[#5f9ea0]" size={48} />
+                  </div>
+                </div>
+                <p className="text-lg mb-0 leading-relaxed text-center">
+                  Há mais de um século, a Gruta de Lourdes tem sido destino de peregrinação, 
+                  conhecida por suas curas milagrosas e pela forte conexão espiritual. 
+                  Peregrinos relatam transformações profundas após visitarem o local. 
+                  Agora você também pode ter sua oração colocada diretamente nesse espaço sagrado.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* CTA Principal */}
+        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-blue-50">
+          <div className="container mx-auto text-center max-w-4xl">
+            <h3 className="text-3xl font-playfair font-semibold mb-6 text-[#333333]">
+              Receba o Presente dos Milagres Hoje Mesmo
+            </h3>
+            <p className="text-lg mb-8 max-w-3xl mx-auto">
+              Coloque sua oração na Gruta de Lourdes e confie no poder da intervenção divina. 
+              Sua oração, entregue pessoalmente, fará parte da tradição sagrada desse lugar santo.
+            </p>
+            <Button 
+              asChild
+              className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+            >
+              <a href="#formulario">
+                ➡️ Enviar Minha Oração à Gruta de Lourdes
+              </a>
+            </Button>
           </div>
         </section>
       </main>
