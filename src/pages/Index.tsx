@@ -107,9 +107,9 @@ const Index = () => {
               
               <div className="my-8 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1500673922987-e212871fec22" 
+                  src="/img01.jpg" 
                   alt="Gruta de Lourdes" 
-                  className="w-full h-64 md:h-80 object-cover"
+                  className="w-full aspect-video object-cover"
                 />
               </div>
               
@@ -270,9 +270,9 @@ const Index = () => {
             
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" 
+                src="/img02.webp" 
                 alt="Paisagem serena representando bênçãos de Lourdes" 
-                className="w-full h-64 md:h-80 object-cover"
+                className="w-full aspect-video object-cover"
               />
             </div>
           </div>
@@ -308,9 +308,9 @@ const Index = () => {
             
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1473177104440-ffee2f376098" 
+                src="/img03.webp" 
                 alt="Interior de catedral representando a Gruta de Lourdes" 
-                className="w-full h-64 md:h-80 object-cover"
+                className="w-full aspect-video object-cover"
               />
             </div>
             

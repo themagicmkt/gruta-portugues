@@ -64,15 +64,13 @@ const Confirmation = () => {
                   Sempre que estou diante da Gruta, fico comovido com os testemunhos de pessoas que encontraram cura, paz e restauração no corpo e no espírito. Esse local sagrado, onde a Santíssima Virgem Maria apareceu, é conhecido em todo o mundo por seu poder divino de curar. Pela graça de Deus, temos o privilégio de levar suas orações até esse lugar milagroso.
                 </p>
               </div>
-              
-              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+                <div className="my-8 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1473177104440-ffee2f376098" 
+                  src="/img04.webp" 
                   alt="Gruta de Lourdes" 
-                  className="w-full h-64 md:h-80 object-cover"
+                  className="w-full aspect-video object-cover"
                 />
-              </div>
-            </div>
+                </div> </div>
           </div>
         </section>
         
@@ -147,14 +145,13 @@ const Confirmation = () => {
                   Há mais de 160 anos, milhões de pessoas buscaram cura aqui — e muitas foram agraciadas com recuperações milagrosas. Corações restaurados, corpos curados, esperanças renovadas. Parece que o véu entre o Céu e a Terra se torna mais fino em Lourdes, permitindo que nossas orações cheguem rapidamente aos ouvidos do Pai.
                 </p>
               </div>
-              
-              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+                <div className="my-8 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" 
+                  src="/img05.webp" 
                   alt="Rio entre montanhas" 
-                  className="w-full h-64 md:h-80 object-cover"
+                  className="w-full aspect-video object-cover"
                 />
-              </div>
+                </div>
             </div>
           </div>
         </section>
@@ -184,13 +181,11 @@ const Confirmation = () => {
             <div className="flex flex-col gap-8">
               <div className="my-8 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9" 
+                  src="/img06.webp" 
                   alt="Árvores de pinheiro" 
-                  className="w-full h-64 md:h-80 object-cover"
+                  className="w-full aspect-video object-cover"
                 />
-              </div>
-              
-              <div>
+              </div> <div>
                 <p className="text-lg leading-relaxed">
                   Não há nada como a paz e a cura que tomam conta do coração quando confiamos nossas preces a Lourdes. Seja por cura física, restauração espiritual ou alívio emocional, este local santo tem o poder de renovar pela graça de Deus.
                 </p>
