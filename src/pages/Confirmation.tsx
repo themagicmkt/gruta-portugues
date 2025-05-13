@@ -3,8 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { OrderBumpPopup } from "@/components/OrderBumpPopup";
 
 const Confirmation = () => {
+  const [showOrderBump, setShowOrderBump] = useState(false);
+
+  const handleButtonClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowOrderBump(true);
+  };
+
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       {/* Header */}
@@ -226,6 +235,7 @@ const Confirmation = () => {
                   
                   <Button 
                     className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+                    onClick={handleButtonClick}
                   >
                     Incluir minha oração por R$28
                   </Button>
@@ -255,6 +265,7 @@ const Confirmation = () => {
                   
                   <Button 
                     className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+                    onClick={handleButtonClick}
                   >
                     Entrega Completa da Oração por R$35
                   </Button>
@@ -281,6 +292,7 @@ const Confirmation = () => {
                   
                   <Button 
                     className="w-full bg-[#f4d58d] hover:bg-[#e3c47c] text-[#333333] px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+                    onClick={handleButtonClick}
                   >
                     Enviar e Ajudar por R$55
                   </Button>
@@ -335,13 +347,13 @@ const Confirmation = () => {
               <h4 className="font-playfair text-xl mb-4 text-white">Links Importantes</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/termos" className="text-sm hover:text-[#f4d58d] transition-colors">Termos e Condições</Link>
+                  <Link to="/termos" className="text-sm hover:text-[#f4d58d] transition-colors" onClick={handleButtonClick}>Termos e Condições</Link>
                 </li>
                 <li>
-                  <Link to="/privacidade" className="text-sm hover:text-[#f4d58d] transition-colors">Política de Privacidade</Link>
+                  <Link to="/privacidade" className="text-sm hover:text-[#f4d58d] transition-colors" onClick={handleButtonClick}>Política de Privacidade</Link>
                 </li>
                 <li>
-                  <Link to="/contato" className="text-sm hover:text-[#f4d58d] transition-colors">Fale Conosco</Link>
+                  <Link to="/contato" className="text-sm hover:text-[#f4d58d] transition-colors" onClick={handleButtonClick}>Fale Conosco</Link>
                 </li>
               </ul>
               <div className="mt-8">
@@ -355,12 +367,16 @@ const Confirmation = () => {
               asChild
               variant="outline"
               className="text-white border-white/20 hover:bg-white/10"
+              onClick={handleButtonClick}
             >
-              
+              <Link to="#">Finalizar Pedido</Link>
             </Button>
           </div>
         </div>
       </footer>
+
+      {/* Order Bump Popup */}
+      <OrderBumpPopup open={showOrderBump} onOpenChange={setShowOrderBump} />
     </div>
   );
 };
