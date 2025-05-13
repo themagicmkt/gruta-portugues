@@ -9,7 +9,7 @@ const Confirmation = () => {
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       {/* Header */}
       <header className="sticky top-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto flex justify-between items-center py-4 px-4">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
               <HandHeart className="text-[#5f9ea0]" size={24} />
@@ -36,8 +36,8 @@ const Confirmation = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-blue-50">
-          <div className="container mx-auto text-center max-w-4xl">
+        <section className="py-16 md:py-24 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg text-center max-w-4xl">
             <div className="w-20 h-20 mx-auto mb-6 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center">
               <HeartPulse className="text-[#5f9ea0]" size={40} />
             </div>
@@ -49,8 +49,8 @@ const Confirmation = () => {
         </section>
         
         {/* Personal Greeting Section */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-16 px-2 sm:px-4 bg-white">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
               Querido(a) Irmão(ã) em Cristo,
             </h3>
@@ -68,15 +68,15 @@ const Confirmation = () => {
                 <img 
                   src="/img04.webp" 
                   alt="Gruta de Lourdes" 
-                  className="w-full aspect-video object-cover"
+                  className="w-full max-w-none aspect-video object-cover"
                 />
                 </div> </div>
           </div>
         </section>
         
         {/* Lourdes: A Place of Miracles */}
-        <section className="py-16 px-4 bg-blue-50">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-16 px-2 sm:px-4 bg-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
                 Lourdes: Um Lugar de Milagres
@@ -94,8 +94,8 @@ const Confirmation = () => {
         </section>
         
         {/* Prayer Journey Steps */}
-        <section id="como-funciona" className="py-16 md:py-24 px-4 bg-white">
-          <div className="container mx-auto max-w-5xl">
+        <section id="como-funciona" className="py-16 md:py-24 px-2 sm:px-4 bg-white">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-5xl">
             <h3 className="text-3xl font-playfair font-semibold mb-12 text-center text-[#333333]">
               A Jornada da Sua Oração
             </h3>
@@ -129,8 +129,8 @@ const Confirmation = () => {
         </section>
         
         {/* What Makes Lourdes Extraordinary */}
-        <section id="por-que-lourdes" className="py-16 px-4 bg-blue-50">
-          <div className="container mx-auto max-w-4xl">
+        <section id="por-que-lourdes" className="py-16 px-2 sm:px-4 bg-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">
               O Que Torna Lourdes Tão Extraordinária?
             </h3>
@@ -149,7 +149,7 @@ const Confirmation = () => {
                 <img 
                   src="/img05.webp" 
                   alt="Rio entre montanhas" 
-                  className="w-full aspect-video object-cover"
+                  className="w-full max-w-none aspect-video object-cover"
                 />
                 </div>
             </div>
@@ -157,8 +157,8 @@ const Confirmation = () => {
         </section>
         
         {/* Join the Healing Chain */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-16 px-2 sm:px-4 bg-white">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <div className="bg-[#5f9ea0]/5 border border-[#5f9ea0]/10 p-8 rounded-xl shadow-sm">
               <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">
                 Una-se a Esta Corrente de Cura e Fé
@@ -172,8 +172,8 @@ const Confirmation = () => {
         </section>
         
         {/* Ready to Feel Lourdes' Healing Power */}
-        <section className="py-16 px-4 bg-blue-50">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-16 px-2 sm:px-4 bg-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
               Está Pronto para Sentir o Poder Curador de Lourdes?
             </h3>
@@ -183,7 +183,7 @@ const Confirmation = () => {
                 <img 
                   src="/img06.webp" 
                   alt="Árvores de pinheiro" 
-                  className="w-full aspect-video object-cover"
+                  className="w-full max-w-none aspect-video object-cover"
                 />
               </div> <div>
                 <p className="text-lg leading-relaxed">
@@ -195,8 +195,8 @@ const Confirmation = () => {
         </section>
         
         {/* Contribution Section */}
-        <section id="contribuicao" className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-4xl">
+        <section id="contribuicao" className="py-16 px-2 sm:px-4 bg-white">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0] text-center">
               Envie Seu Pedido de Oração Agora
             </h3>
@@ -302,8 +302,8 @@ const Confirmation = () => {
         </section>
         
         {/* Call to Action */}
-        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-blue-50">
-          <div className="container mx-auto text-center max-w-4xl">
+        <section className="py-16 md:py-24 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg text-center max-w-4xl">
             <h3 className="text-3xl font-playfair font-semibold mb-6 text-[#333333]">
               Receba o Presente dos Milagres Hoje Mesmo
             </h3>
@@ -317,7 +317,7 @@ const Confirmation = () => {
 
       {/* Footer */}
       <footer className="bg-[#333333] text-gray-300 py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h4 className="font-playfair text-xl mb-4 text-white">Voluntários de Lourdes</h4>
@@ -356,9 +356,7 @@ const Confirmation = () => {
               variant="outline"
               className="text-white border-white/20 hover:bg-white/10"
             >
-              <Link to="/">
-                Voltar para a Página Inicial
-              </Link>
+              
             </Button>
           </div>
         </div>

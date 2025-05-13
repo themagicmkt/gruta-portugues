@@ -41,7 +41,7 @@ const Index = () => {
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       {/* Header */}
       <header className="sticky top-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto flex justify-between items-center py-4 px-4">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
               <HandHeart className="text-[#5f9ea0]" size={24} />
@@ -68,8 +68,8 @@ const Index = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-blue-50">
-          <div className="container mx-auto text-center max-w-4xl">
+        <section className="py-16 md:py-24 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg text-center max-w-4xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-6 text-[#333333]">
               🕊 Milagres Acontecem Todos os Dias na Gruta de Lourdes
             </h2>
@@ -93,8 +93,8 @@ const Index = () => {
         </section>
 
         {/* Entrega da Oração */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-16 px-2 sm:px-4 bg-white">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <div className="bg-[#f4d58d]/10 border border-[#f4d58d]/30 p-8 rounded-xl shadow-sm">
               <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">
                 Sua Oração, Entregue na Gruta de Lourdes
@@ -109,7 +109,7 @@ const Index = () => {
                 <img 
                   src="/img01.jpg" 
                   alt="Gruta de Lourdes" 
-                  className="w-full aspect-video object-cover"
+                  className="w-full max-w-none aspect-video object-cover"
                 />
               </div>
               
@@ -128,12 +128,12 @@ const Index = () => {
         </section>
 
         {/* Formulário de Oração - Movido para a terceira seção */}
-        <section id="formulario" className="py-16 px-4 bg-blue-50">
-          <div className="container mx-auto max-w-3xl">
+        <section id="formulario" className="py-16 px-2 sm:px-4 bg-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-full sm:max-w-2xl">
             <h3 className="text-3xl font-playfair font-semibold mb-10 text-center text-[#333333]">
               Envie Sua Oração à Gruta de Lourdes
             </h3>
-            <Card className="border-[#5f9ea0]/30 shadow-lg">
+            <Card className="w-full border-[#5f9ea0]/30 shadow-lg">
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="space-y-2">
@@ -202,8 +202,8 @@ const Index = () => {
         </section>
 
         {/* Como Funciona */}
-        <section id="como-funciona" className="py-16 md:py-24 px-4 bg-white">
-          <div className="container mx-auto max-w-5xl">
+        <section id="como-funciona" className="py-16 md:py-24 px-2 sm:px-4 bg-white">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-5xl">
             <h3 className="text-3xl font-playfair font-semibold mb-12 text-center text-[#333333]">Como Funciona</h3>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -235,8 +235,8 @@ const Index = () => {
         </section>
 
         {/* Os Milagres Esperam por Você */}
-        <section className="py-16 px-4 bg-blue-50">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-16 px-2 sm:px-4 bg-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Os Milagres Esperam por Você</h3>
             <p className="text-lg mb-6 leading-relaxed">
               Ao enviar sua oração à Gruta de Lourdes, você se une a milhares de pessoas que já buscaram a graça divina nesse santuário. 
@@ -260,8 +260,8 @@ const Index = () => {
         </section>
 
         {/* Viva as Bênçãos de Lourdes */}
-        <section className="py-16 px-4 bg-gradient-to-b from-white to-blue-50">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-16 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Viva as Bênçãos de Lourdes Sem Sair de Casa</h3>
             <p className="text-lg mb-8 text-center leading-relaxed">
               Você não precisa viajar até Lourdes para receber as bênçãos deste lugar sagrado. 
@@ -272,15 +272,15 @@ const Index = () => {
               <img 
                 src="/img02.webp" 
                 alt="Paisagem serena representando bênçãos de Lourdes" 
-                className="w-full aspect-video object-cover"
+                className="w-full max-w-none aspect-video object-cover"
               />
             </div>
           </div>
         </section>
 
         {/* Compartilhe as Bênçãos */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-16 px-2 sm:px-4 bg-white">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <div className="bg-[#5f9ea0]/5 border border-[#5f9ea0]/10 p-8 rounded-xl shadow-sm">
               <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">Compartilhe as Bênçãos com Quem Você Ama</h3>
               <p className="text-lg mb-6 text-center leading-relaxed">
@@ -302,15 +302,15 @@ const Index = () => {
         </section>
 
         {/* Por Que a Gruta de Lourdes */}
-        <section id="por-que-lourdes" className="py-16 px-4 bg-blue-50">
-          <div className="container mx-auto max-w-4xl">
+        <section id="por-que-lourdes" className="py-16 px-2 sm:px-4 bg-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Por Que a Gruta de Lourdes?</h3>
             
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img 
                 src="/img03.webp" 
                 alt="Interior de catedral representando a Gruta de Lourdes" 
-                className="w-full aspect-video object-cover"
+                className="w-full max-w-none aspect-video object-cover"
               />
             </div>
             
@@ -333,8 +333,8 @@ const Index = () => {
         </section>
 
         {/* CTA Principal */}
-        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-blue-50">
-          <div className="container mx-auto text-center max-w-4xl">
+        <section className="py-16 md:py-24 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg text-center max-w-4xl">
             <h3 className="text-3xl font-playfair font-semibold mb-6 text-[#333333]">
               Receba o Presente dos Milagres Hoje Mesmo
             </h3>
@@ -342,21 +342,19 @@ const Index = () => {
               Coloque sua oração na Gruta de Lourdes e confie no poder da intervenção divina. 
               Sua oração, entregue pessoalmente, fará parte da tradição sagrada desse lugar santo.
             </p>
-            <Button 
-              asChild
-              className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+            <a
+              href="#formulario"
+              className="inline-block px-6 py-4 bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white rounded-lg text-lg font-medium shadow-md hover:shadow-lg text-center leading-tight"
             >
-              <a href="#formulario">
-                ➡️ Enviar Minha Oração à Gruta de Lourdes
-              </a>
-            </Button>
+              ➡️ Enviar Minha Oração<br />à Gruta de Lourdes
+            </a>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#333333] text-gray-300 py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <footer className="bg-[#333333] text-gray-300 py-12 px-2 sm:px-4">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h4 className="font-playfair text-xl mb-4 text-white">Voluntários de Lourdes</h4>
