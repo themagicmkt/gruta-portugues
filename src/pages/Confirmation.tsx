@@ -227,7 +227,7 @@ const Confirmation = () => {
                   </p>
                   
                   <Button className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-                    <a href="https://pay.voluntarios-de-lourdes.online/PVYB34eeB1lZKzk" target="_blank" rel="noopener noreferrer">
+                    <a href="https://seguro.voluntariosdelourdes.online/r/O1S2XW5HJE" target="_blank" rel="noopener noreferrer">
                       Incluir minha oração
                     </a>
                   </Button>
@@ -256,7 +256,7 @@ const Confirmation = () => {
                   </p>
                   
                   <Button className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-                    <a href="https://pay.voluntarios-de-lourdes.online/YL9jZDWWBJy3p4q" target="_blank" rel="noopener noreferrer">
+                    <a href="https://seguro.voluntariosdelourdes.online/r/9XBO3KMO78" target="_blank" rel="noopener noreferrer">
                       Entrega Completa da Oração
                     </a>
                   </Button>
@@ -282,7 +282,7 @@ const Confirmation = () => {
                   </p>
                   
                   <Button className="w-full bg-[#f4d58d] hover:bg-[#e3c47c] text-[#333333] px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-                    <a href="https://pay.voluntarios-de-lourdes.online/v7R0glooeKeGVr9" target="_blank" rel="noopener noreferrer">
+                    <a href="https://seguro.voluntariosdelourdes.online/r/LW61SFGXDT" target="_blank" rel="noopener noreferrer">
                       Enviar e Ajudar
                     </a>
                   </Button>
