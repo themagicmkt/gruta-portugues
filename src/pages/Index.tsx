@@ -23,18 +23,37 @@ const Index = () => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-    
-    // Simular envio
-    toast({
-      title: "Oração recebida",
-      description: "Seu pedido será levado à Gruta de Lourdes"
-    });
-    
-    // Redirect to loading page instead of confirmation
-    setTimeout(() => {
-      navigate("/salvando");
+
+    try {
+      await fetch("https://gruta-api-portugues.vercel.app/api/activecampaign", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email
+        })
+      });
+
+      toast({
+        title: "Oração recebida",
+        description: "Seu pedido será levado a Gruta de Lourdes."
+      });
+
+      setTimeout(() => {
+        navigate("/salvando");
+        setIsSubmitting(false);
+      }, 1500);
+    } catch (error) {
+      console.error("Erro ao enviar para ActiveCampaign", error);
+      toast({
+        title: "Erro",
+        description: "Não foi possível enviar sua oração. Tente novamente.",
+        variant: "destructive"
+      });
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -127,61 +146,78 @@ const Index = () => {
           </div>
         </section>
 
-       {/* Formulário de Oração - Movido para a terceira seção */}
-<section id="formulario" className="py-16 px-2 sm:px-4 bg-blue-50">
-  <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-full sm:max-w-2xl">
-    <h3 className="text-3xl font-playfair font-semibold mb-10 text-center text-[#333333]">
-      Envie Sua Oração à Gruta de Lourdes
-    </h3>
-    <Card className="w-full border-[#5f9ea0]/30 shadow-lg">
-      <CardContent className="p-8">
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          <div className="space-y-2">
-            <label htmlFor="name" className="block text-sm font-medium">Nome</label>
-            <Input
-              id="name"
-              placeholder="Digite seu nome"
-              className="w-full border-[#5f9ea0]/30"
-              {...register("name", { required: "Nome é obrigatório" })}
-            />
-            {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
-          </div>
+       {/* Formulário */}
+        <section id="formulario" className="py-16 px-2 sm:px-4 bg-blue-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg sm:max-w-2xl">
+            <h3 className="text-3xl font-playfair font-semibold mb-10 text-center text-[#333333]">
+              Envie sua oração ao Santuário de Aparecida
+            </h3>
+            <Card className="w-full border-[#5f9ea0]/30 shadow-lg">
+              <CardContent className="p-8">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="block text-sm font-medium">Nome</label>
+                    <Input
+                      id="name"
+                      placeholder="Digite seu nome"
+                      className="w-full border-[#5f9ea0]/30"
+                      {...register("name", { required: "O nome é obrigatório" })}
+                    />
+                    {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+                  </div>
 
-          <div className="space-y-2">
-            <label htmlFor="prayer" className="block text-sm font-medium">Seu Pedido de Oração</label>
-            <Textarea
-              id="prayer"
-              placeholder="Escreva sua oração aqui..."
-              className="w-full min-h-[150px] border-[#5f9ea0]/30"
-              {...register("prayer", { required: "O pedido de oração é obrigatório" })}
-            />
-            {errors.prayer && <p className="text-red-500 text-sm">{errors.prayer.message}</p>}
-          </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="block text-sm font-medium">E-mail</label>
+                    <Input
+                      id="email"
+                      placeholder="Digite seu e-mail"
+                      className="w-full border-[#5f9ea0]/30"
+                      {...register("email", {
+                        required: "O e-mail é obrigatório",
+                        pattern: {
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "E-mail inválido"
+                        }
+                      })}
+                    />
+                    {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                  </div>
 
-          <div className="pt-4">
-            <Button 
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-            >
-              {isSubmitting ? (
-                <span className="flex items-center gap-2">
-                  <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Enviando sua oração...
-                </span>
-              ) : (
-                "Enviar Minha Oração"
-              )}
-            </Button>
+                  <div className="space-y-2">
+                    <label htmlFor="prayer" className="block text-sm font-medium">Sua intenção de oração</label>
+                    <Textarea
+                      id="prayer"
+                      placeholder="Escreva sua oração aqui..."
+                      className="w-full min-h-[150px] border-[#5f9ea0]/30"
+                      {...register("prayer", { required: "A oração é obrigatória" })}
+                    />
+                    {errors.prayer && <p className="text-red-500 text-sm">{errors.prayer.message}</p>}
+                  </div>
+
+                  <div className="pt-4">
+                    <Button 
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+                    >
+                      {isSubmitting ? (
+                        <span className="flex items-center gap-2">
+                          <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Enviando sua oração...
+                        </span>
+                      ) : (
+                        "Enviar minha oração"
+                      )}
+                    </Button>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
           </div>
-        </form>
-      </CardContent>
-    </Card>
-  </div>
-</section>
+        </section>
 
         {/* Como Funciona */}
         <section id="como-funciona" className="py-16 md:py-24 px-2 sm:px-4 bg-white">
