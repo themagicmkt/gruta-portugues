@@ -382,11 +382,16 @@ const Confirmation = () => {
         <h4 className="font-playfair text-lg font-semibold text-white mb-3">
           Aviso Legal Importante
         </h4>
-        <p className="text-gray-300 leading-relaxed text-sm">
-          O projeto Voluntários de Aparecida é uma iniciativa devocional independente e não possui vínculo oficial com o Santuário Nacional de Nossa Senhora Aparecida, 
-          a Arquidiocese de Aparecida ou qualquer instituição religiosa oficial. Nossa missão é puramente espiritual e voluntária. 
-          Não prometemos milagres, apenas entregamos com fé as intenções enviadas ao altar da Mãe Aparecida.
-        </p>
+       <p className="text-gray-300 leading-relaxed text-sm">
+  Nossa missão é levar as orações dos fiéis até a Gruta de Lourdes, onde Maria apareceu a Santa Bernadette.  
+  Já fazemos isso com amor, fé e dedicação há mais de 14 anos, entregando cada intenção com respeito e reverência.  
+  Todos os dias, recebemos pedidos de oração de pessoas que confiam no poder da intercessão de Nossa Senhora.  
+  É uma honra poder ser ponte entre o coração dos devotos e este local de tantas graças.  
+  <br /><br />
+  O projeto Voluntários de Lourdes é uma iniciativa devocional independente e não possui vínculo oficial com o Santuário de Nossa Senhora de Lourdes,  
+  a Diocese de Tarbes e Lourdes ou qualquer instituição religiosa oficial. Nossa missão é puramente espiritual e voluntária.  
+  Não prometemos milagres, apenas entregamos com fé as intenções enviadas à gruta sagrada onde Maria apareceu.
+</p>
       </div>
 
       <div className="text-center text-gray-400">
