@@ -371,41 +371,86 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#333333] text-gray-300 py-12 px-2 sm:px-4">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="font-playfair text-xl mb-4 text-white">Voluntários de Lourdes</h4>
-              <p className="text-sm leading-relaxed mb-6">
-                Voluntários de Lourdes fazem parte do Ministério das Devoções. Não somos representantes 
-                oficiais do Santuário de Lourdes. Somos apenas voluntários que dedicam tempo e esforço 
-                para levar as bênçãos de Nossa Senhora de Lourdes a quem precisa.
-              </p>
-              <p className="text-sm leading-relaxed">
-                O conteúdo enviado (e-mails, ebooks e demais materiais) é apenas para fins informativos e 
-                espirituais. Para questões médicas, legais ou psicológicas, procure um profissional qualificado.
-              </p>
-            </div>
-            <div className="md:pl-8">
-              <h4 className="font-playfair text-xl mb-4 text-white">Links Importantes</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Termos e Condições</a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Política de Privacidade</a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Fale Conosco</a>
-                </li>
-              </ul>
-              <div className="mt-8">
-                <p className="text-sm text-gray-400">&copy; 2025 Voluntários de Lourdes. Todos os direitos reservados.</p>
-              </div>
-            </div>
+      <footer id="contato" className="bg-gray-800 text-gray-300">
+  <div className="max-w-screen-lg mx-auto px-6 py-12">
+    <div className="grid md:grid-cols-3 gap-8 mb-8">
+      {/* Branding */}
+      <div>
+        <div className="flex items-center space-x-3 mb-6">
+          <div className="bg-marian-blue p-2 rounded-xl">
+            <HandHeart className="h-6 w-6 text-white" />
+          </div>
+          <div>
+            <h3 className="font-playfair text-xl font-bold text-white">
+              Voluntários de Aparecida
+            </h3>
+            <p className="text-sm text-marian-blue">Levando sua fé até os pés da Padroeira do Brasil</p>
           </div>
         </div>
-      </footer>
+        <p className="text-gray-400 leading-relaxed">
+          Somos um grupo independente de devotos católicos comprometidos em levar intenções de oração ao Santuário Nacional de Nossa Senhora Aparecida.
+        </p>
+      </div>
+
+      {/* Contato */}
+      <div>
+        <h4 className="font-playfair text-lg font-semibold text-white mb-4">
+          Contato
+        </h4>
+        <div className="space-y-3">
+          <div className="flex items-center space-x-3">
+            <Mail className="h-5 w-5 text-marian-blue" />
+            <a href="mailto:contato@volunteerslourdes.org" className="hover:text-white transition-colors">
+              contato@volunteerslourdes.org
+            </a>
+          </div>
+          <div className="flex items-center space-x-3">
+            <MapPin className="h-5 w-5 text-marian-blue" />
+            <a href="https://wa.me/5511999999999" className="hover:text-white transition-colors">
+              +55 11 99848877
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Legal */}
+      <div>
+        <h4 className="font-playfair text-lg font-semibold text-white mb-4">
+          Informações Legais
+        </h4>
+        <div className="space-y-2">
+          <a href="#" className="block hover:text-white transition-colors">
+            Termos de Uso
+          </a>
+          <a href="#" className="block hover:text-white transition-colors">
+            Política de Privacidade
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Aviso Legal */}
+    <div className="border-t border-gray-700 pt-8">
+      <div className="bg-gray-700 rounded-xl p-6 mb-6">
+        <h4 className="font-playfair text-lg font-semibold text-white mb-3">
+          Aviso Legal Importante
+        </h4>
+        <p className="text-gray-300 leading-relaxed text-sm">
+          O projeto Voluntários de Aparecida é uma iniciativa devocional independente e não possui vínculo oficial com o Santuário Nacional de Nossa Senhora Aparecida, 
+          a Arquidiocese de Aparecida ou qualquer instituição religiosa oficial. Nossa missão é puramente espiritual e voluntária. 
+          Não prometemos milagres, apenas entregamos com fé as intenções enviadas ao altar da Mãe Aparecida.
+        </p>
+      </div>
+
+      <div className="text-center text-gray-400">
+        <p>&copy; 2025 Voluntários de Aparecida. Todos os direitos reservados.</p>
+        <p className="mt-2 text-sm">
+          Desenvolvido com fé para levar esperança a quem mais precisa.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };
