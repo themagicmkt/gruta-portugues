@@ -22,39 +22,41 @@ const Index = () => {
   });
 
   const onSubmit = async (data) => {
-    setIsSubmitting(true);
+  setIsSubmitting(true);
 
-    try {
-      await fetch("https://gruta-api-portugues.vercel.app/api/activecampaign", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email
-        })
-      });
+  try {
+    await fetch("https://api-email-delta.vercel.app/api/activecampaign", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        prayer: data.prayer // ← ESSENCIAL
+      })
+    });
 
-      toast({
-        title: "Oração recebida",
-        description: "Seu pedido será levado a Gruta de Lourdes."
-      });
+    toast({
+      title: "Oração recebida",
+      description: "Seu pedido será levado à Gruta de Lourdes."
+    });
 
-      setTimeout(() => {
-        navigate("/salvando");
-        setIsSubmitting(false);
-      }, 1500);
-    } catch (error) {
-      console.error("Erro ao enviar para ActiveCampaign", error);
-      toast({
-        title: "Erro",
-        description: "Não foi possível enviar sua oração. Tente novamente.",
-        variant: "destructive"
-      });
+    setTimeout(() => {
+      navigate("/salvando");
       setIsSubmitting(false);
-    }
-  };
+    }, 1500);
+  } catch (error) {
+    console.error("Erro ao enviar para ActiveCampaign", error);
+    toast({
+      title: "Erro",
+      description: "Não foi possível enviar sua oração. Tente novamente.",
+      variant: "destructive"
+    });
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans">
