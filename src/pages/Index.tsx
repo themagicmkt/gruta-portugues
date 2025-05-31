@@ -37,6 +37,21 @@ const Index = () => {
       })
     });
 
+     // 🔥 Nova chamada para gerar headline e parágrafo
+  const res = await fetch("https://api-sellpage.vercel.app/api/generate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: data.name,
+      email: data.email,
+      prayer: data.prayer
+    })
+  });
+
+  const gptData = await res.json();
+  localStorage.setItem("headline", gptData.headline);
+  localStorage.setItem("paragrafo", gptData.paragrafo);
+
     toast({
       title: "Oração recebida",
       description: "Seu pedido será levado à Gruta de Lourdes."

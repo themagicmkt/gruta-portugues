@@ -1,11 +1,19 @@
-
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const Confirmation = () => {
+  const [headline, setHeadline] = useState("");
+  const [paragrafo, setParagrafo] = useState("");
+
+  useEffect(() => {
+    const h = localStorage.getItem("headline");
+    const p = localStorage.getItem("paragrafo");
+    if (h) setHeadline(h);
+    if (p) setParagrafo(p);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans">
@@ -45,7 +53,7 @@ const Confirmation = () => {
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-6 text-[#333333]">
-              Seu Pedido de Oração foi Recebido para a Sagrada Gruta de Lourdes
+              {headline || "Seu Pedido de Oração foi Recebido para a Sagrada Gruta de Lourdes"}
             </h2>
           </div>
         </section>
@@ -56,7 +64,13 @@ const Confirmation = () => {
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
               Querido(a) Irmão(ã) em Cristo,
             </h3>
-            
+
+            {paragrafo && (
+              <p className="text-lg mb-6 leading-relaxed">
+                {paragrafo}
+              </p>
+            )}
+
             <div className="flex flex-col gap-8">
               <div>
                 <p className="text-lg mb-4 leading-relaxed">
@@ -66,13 +80,14 @@ const Confirmation = () => {
                   Sempre que estou diante da Gruta, fico comovida com os testemunhos de pessoas que encontraram cura, paz e restauração no corpo e no espírito. Esse local sagrado, onde a Santíssima Virgem Maria apareceu, é conhecido em todo o mundo por seu poder divino de curar. Pela graça de Deus, temos o privilégio de levar suas orações até esse lugar milagroso.
                 </p>
               </div>
-                <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
                 <img 
                   src="/img04.webp" 
                   alt="Gruta de Lourdes" 
                   className="w-full max-w-none aspect-video object-cover"
                 />
-                </div> </div>
+              </div>
+            </div>
           </div>
         </section>
         
