@@ -25,7 +25,7 @@ const Index = () => {
   setIsSubmitting(true);
 
   try {
-    await fetch("https://api-email.vercel.app/api/activecampaign", {
+    await fetch("https://api-email-delta.vercel.app/api/activecampaign", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
