@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Confirmation from "./pages/Confirmation";
 import LoadingPage from "./pages/LoadingPage";
+import AdminPanel from "./pages/AdminPanel";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/salvando" element={<LoadingPage />} />
           <Route path="/confirmacao" element={<Confirmation />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/admin" element={<AdminPanel />} /> 
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
