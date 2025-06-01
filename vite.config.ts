@@ -1,24 +1,22 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
-export default defineConfig(({ mode }) => ({
-  base: "./", // ✅ ESSENCIAL PARA VER SERVE OS ASSETS
+export default defineConfig({
+  base: "./", // Mantém os assets funcionando na Vercel
   build: {
-    outDir: "dist" // ✅ NECESSÁRIO PARA VERCEL LOCALIZAR A PASTA DE OUTPUT
+    outDir: "dist"
   },
   server: {
     host: "::",
     port: 8080,
   },
   plugins: [
-    react(),
-    mode === 'development' && componentTagger(),
-  ].filter(Boolean),
+    react()
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});
