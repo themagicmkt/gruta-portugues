@@ -1,4 +1,3 @@
-// src/pages/AdminPanel.tsx
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,7 +11,7 @@ const AdminPanel = () => {
       const { data, error } = await supabase
         .from("pedidos_oracao")
         .select("*")
-        .order("created_at", { ascending: false }); // coluna correta agora é 'data'
+        .order("created_at", { ascending: false });
 
       if (error) {
         console.error("Erro ao buscar pedidos:", error.message);
@@ -39,11 +38,11 @@ const AdminPanel = () => {
             <Card key={pedido.id} className="border bg-white">
               <CardContent className="p-4">
                 <p className="text-sm text-gray-600">
-                  📅 {new Date(pedido.data).toLocaleString()}
+                  📅 {new Date(pedido.created_at).toLocaleString()}
                 </p>
-                <h2 className="text-lg font-semibold">{pedido.nome}</h2>
+                <h2 className="text-lg font-semibold">{pedido.name}</h2>
                 <p className="text-sm text-gray-700 mb-2">{pedido.email}</p>
-                <p className="text-gray-900 whitespace-pre-wrap">{pedido.mensagem}</p>
+                <p className="text-gray-900 whitespace-pre-wrap">{pedido.prayer}</p>
               </CardContent>
             </Card>
           ))}
