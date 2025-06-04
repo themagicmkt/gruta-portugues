@@ -24,7 +24,7 @@ const Confirmation = () => {
             <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
               <HandHeart className="text-[#5f9ea0]" size={24} />
             </div>
-            <h1 className="text-xl font-playfair font-semibold text-[#5f9ea0]">Volutários de Lourdes</h1>
+            <h1 className="text-xl font-playfair font-semibold text-[#5f9ea0]">Voluntários de Lourdes</h1>
           </div>
           
           <nav className="hidden md:flex space-x-6">
