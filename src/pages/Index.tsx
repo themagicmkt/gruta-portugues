@@ -25,9 +25,32 @@ const Index = () => {
   setIsSubmitting(true);
 
   try {
-    // Simula envio local (sem chamadas externas)
-    localStorage.setItem("headline", "Seu Pedido de Oração foi Recebido para a Sagrada Gruta de Lourdes");
-    localStorage.setItem("paragrafo", "Sua oração foi recebida com carinho e será levada com fé até o Santuário. Que a luz divina te fortaleça e que Nossa Senhora interceda pelas suas intenções.");
+    await fetch("https://api-email-delta.vercel.app/api/activecampaign", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        prayer: data.prayer // ← ESSENCIAL
+      })
+    });
+
+     // 🔥 Nova chamada para gerar headline e parágrafo
+  const res = await fetch("https://api-sellpage.vercel.app/api/generate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: data.name,
+      email: data.email,
+      prayer: data.prayer
+    })
+  });
+
+  const gptData = await res.json();
+  localStorage.setItem("headline", gptData.headline);
+  localStorage.setItem("paragrafo", gptData.paragrafo);
 
     toast({
       title: "Oração recebida",
@@ -39,10 +62,10 @@ const Index = () => {
       setIsSubmitting(false);
     }, 1500);
   } catch (error) {
-    console.error("Erro local inesperado:", error);
+    console.error("Erro ao enviar para ActiveCampaign", error);
     toast({
       title: "Erro",
-      description: "Algo deu errado. Tente novamente.",
+      description: "Não foi possível enviar sua oração. Tente novamente.",
       variant: "destructive"
     });
     setIsSubmitting(false);

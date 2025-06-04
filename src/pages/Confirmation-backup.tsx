@@ -59,37 +59,35 @@ const Confirmation = () => {
         </section>
         
         {/* Personal Greeting Section */}
-        <section className="py-16 px-2 sm:px-4 bg-white">
-          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-            <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
-              Querido(a) Irmão(ã) em Cristo,
-            </h3>
+<section className="py-16 px-2 sm:px-4 bg-white">
+  <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
+    <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
+      Querido(a) Irmão(ã) em Cristo,
+    </h3>
 
-            {paragrafo && (
-              <p className="text-lg mb-6 leading-relaxed">
-                {paragrafo}
-              </p>
-            )}
+    <div className="flex flex-col gap-8">
+      <div>
+        <p className="text-lg mb-4 leading-relaxed text-[#e63946] font-semibold">
+          Leia até o final:
+        </p>
+        <p className="text-lg mb-4 leading-relaxed">
+          Aqui é a Irmá Fátima, e escrevo a você hoje com grande alegria e esperança no coração. Por muitos anos fui abençoada por servir como voluntáriária na Gruta de Lourdes – um lugar onde milagres de cura acontecem todos os dias.
+        </p>
+        <p className="text-lg mb-4 leading-relaxed">
+          Sempre que estou diante da Gruta, fico comovida com os testemunhos de pessoas que encontraram cura, paz e restauração no corpo e no espírito. Esse local sagrado, onde a Santíssima Virgem Maria apareceu, é conhecido em todo o mundo por seu poder divino de curar. Pela graça de Deus, temos o privilégio de levar suas orações até esse lugar milagroso.
+        </p>
+      </div>
 
-            <div className="flex flex-col gap-8">
-              <div>
-                <p className="text-lg mb-4 leading-relaxed">
-                  Aqui é a Irmá Fátima, e escrevo a você hoje com grande alegria e esperança no coração. Por muitos anos fui abençoada por servir como voluntáriária na Gruta de Lourdes – um lugar onde milagres de cura acontecem todos os dias.
-                </p>
-                <p className="text-lg mb-4 leading-relaxed">
-                  Sempre que estou diante da Gruta, fico comovida com os testemunhos de pessoas que encontraram cura, paz e restauração no corpo e no espírito. Esse local sagrado, onde a Santíssima Virgem Maria apareceu, é conhecido em todo o mundo por seu poder divino de curar. Pela graça de Deus, temos o privilégio de levar suas orações até esse lugar milagroso.
-                </p>
-              </div>
-              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="/img04.webp" 
-                  alt="Gruta de Lourdes" 
-                  className="w-full max-w-none aspect-video object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+      <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+        <img 
+          src="/img04.webp" 
+          alt="Gruta de Lourdes" 
+          className="w-full max-w-none aspect-video object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
         
         {/* Lourdes: A Place of Miracles */}
         <section className="py-16 px-2 sm:px-4 bg-blue-50">
