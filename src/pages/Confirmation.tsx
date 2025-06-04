@@ -47,16 +47,21 @@ const Confirmation = () => {
       <main>
         {/* Hero Section */}
         <section className="py-16 md:py-24 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
-          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg text-center max-w-4xl">
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center">
-              <HeartPulse className="text-[#5f9ea0]" size={40} />
-            </div>
-            
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-6 text-[#333333]">
-              {headline || "Seu Pedido de Oração foi Recebido para a Sagrada Gruta de Lourdes"}
-            </h2>
-          </div>
-        </section>
+  <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg text-center max-w-4xl">
+    <div className="w-20 h-20 mx-auto mb-6 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center">
+      <HeartPulse className="text-[#5f9ea0]" size={40} />
+    </div>
+
+    <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-4 text-[#333333]">
+      {headline || "Seu Pedido de Oração foi Recebido para a Sagrada Gruta de Lourdes"}
+    </h2>
+
+    {/* Frase de alerta logo abaixo */}
+    <p className="text-red-600 text-lg font-medium">
+      Sua oração foi recebida, mas ainda <strong>não foi entregue</strong>. Leia até o final para <strong>confirmar o seu pedido</strong>.
+    </p>
+  </div>
+</section>
         
         {/* Personal Greeting Section */}
         <section className="py-16 px-2 sm:px-4 bg-white">
