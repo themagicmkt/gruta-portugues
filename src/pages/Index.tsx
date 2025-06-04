@@ -465,7 +465,7 @@ const Index = () => {
       </div>
 
       <div className="text-center text-gray-400">
-        <p>&copy; 2025 Voluntários de Aparecida. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Voluntários de Aparecida. Todos os direitos reservadoss.</p>
         <p className="mt-2 text-sm">
           Desenvolvido com fé para levar esperança a quem mais precisa.
         </p>
