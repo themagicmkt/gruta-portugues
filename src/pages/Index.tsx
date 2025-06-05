@@ -54,11 +54,11 @@ const Index = () => {
 
     toast({
       title: "Oração recebida",
-      description: "Seu pedido será levado à Gruta de Lourdes."
+      description: "Não feche essa página."
     });
 
     setTimeout(() => {
-      navigate("/salvando");
+      navigate("/salvando", { state: { nome: data.name } });
       setIsSubmitting(false);
     }, 1500);
   } catch (error) {

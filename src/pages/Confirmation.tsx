@@ -3,10 +3,25 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+
+
 
 const Confirmation = () => {
   const [headline, setHeadline] = useState("");
   const [paragrafo, setParagrafo] = useState("");
+
+  const location = useLocation();
+  const state = location.state as { nome?: string; genero?: string } | null;
+
+  const nomeCompleto = state?.nome || "devoto(a)";
+  const genero = state?.genero || ""; // ✅ agora declarado corretamente
+
+  const primeiroNome = nomeCompleto.split(" ")[0];
+  const firstName = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
+  const saudacao = `Olá, ${firstName}`;
+  const prontx = genero === "feminino" ? "pronta" : "pronto";
 
   useEffect(() => {
     const h = localStorage.getItem("headline");
@@ -53,22 +68,25 @@ const Confirmation = () => {
     </div>
 
     <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-4 text-[#333333]">
-      {headline || "Seu Pedido de Oração foi Recebido para a Sagrada Gruta de Lourdes"}
+      {headline || "📿 Falta apenas um passo para sua oração chegar à Gruta de Lourdes"}
     </h2>
 
     {/* Frase de alerta logo abaixo */}
-    <p className="text-red-600 text-lg font-medium">
-      Sua oração foi recebida, mas ainda <strong>não foi entregue</strong>. Leia até o final para <strong>confirmar o seu pedido</strong>.
-    </p>
+    <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-900 p-4 rounded-md mt-6">
+  <p className="text-lg font-medium">
+    Sua oração foi recebida com fé, mas ainda <strong className="text-blue-700">não foi entregue</strong>.
+    Siga até o final da página para <strong className="text-blue-700">concluir esse gesto sagrado</strong>.
+  </p>
+</div>
   </div>
 </section>
         
         {/* Personal Greeting Section */}
         <section className="py-16 px-2 sm:px-4 bg-white">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-            <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
-              Querido(a) Irmão(ã) em Cristo,
-            </h3>
+           <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
+  {saudacao}
+</h3>
 
             {paragrafo && (
               <p className="text-lg mb-6 leading-relaxed">
@@ -105,7 +123,7 @@ const Confirmation = () => {
               </h3>
               
               <p className="text-lg mb-4 leading-relaxed">
-                Amigo(a), eu pessoalmente testemunhei o poder curador da oração em Lourdes. Vi pessoas encontrarem alívio de doenças crônicas, se recuperarem fisicamente e alcançarem uma paz interior que só Deus pode oferecer. É como se o Céu tocasse a Terra em Lourdes — e cada oração elevada ali é acolhida com compaixão e misericórdia divina.
+                {firstName}, eu pessoalmente testemunhei o poder curador da oração em Lourdes. Vi pessoas encontrarem alívio de doenças crônicas, se recuperarem fisicamente e alcançarem uma paz interior que só Deus pode oferecer. É como se o Céu tocasse a Terra em Lourdes — e cada oração elevada ali é acolhida com compaixão e misericórdia divina.
               </p>
               
               <p className="text-lg leading-relaxed">
@@ -197,7 +215,7 @@ const Confirmation = () => {
         <section className="py-16 px-2 sm:px-4 bg-blue-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
-              Está Pronto para Sentir o Poder Curador de Lourdes?
+              {firstName}, está {prontx} para sentir o poder curador de Lourdes?
             </h3>
             
             <div className="flex flex-col gap-8">
@@ -315,11 +333,16 @@ const Confirmation = () => {
             </div>
             
             <div className="mt-10 text-center">
-              <p className="text-lg font-playfair italic">
-                "Levai as cargas uns dos outros e, assim, cumprireis a lei de Cristo."
-              </p>
-              <p className="text-sm">– Gálatas 6:2</p>
-            </div>
+  <p className="text-lg font-playfair italic text-[#5f9ea0]">
+    {firstName}, Deus tocou seu coração por um motivo. Escolha agora uma forma de levar sua oração até Lourdes.
+  </p>
+
+  <p className="text-lg font-playfair italic text-[#333333] mt-6">
+    "Levai as cargas uns dos outros e, assim, cumprireis a lei de Cristo."
+  </p>
+
+  <p className="text-sm text-[#666666]">– Gálatas 6:2</p>
+</div>
           </div>
         </section>
         

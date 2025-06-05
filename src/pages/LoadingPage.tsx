@@ -1,19 +1,19 @@
-
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Loader } from "lucide-react";
 
 const LoadingPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const nome = location.state?.nome || "devoto(a)";
 
   useEffect(() => {
-    // Redirect to confirmation page after 3-5 seconds
     const redirectTimer = setTimeout(() => {
-      navigate("/confirmacao");
-    }, 4000); // 4 seconds
+      navigate("/confirmacao", { state: { nome } });
+    }, 4000);
 
     return () => clearTimeout(redirectTimer);
-  }, [navigate]);
+  }, [navigate, nome]);
 
   return (
     <div className="min-h-screen bg-blue-50 flex flex-col items-center justify-center text-center px-4">
