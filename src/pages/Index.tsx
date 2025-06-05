@@ -25,17 +25,6 @@ const Index = () => {
   setIsSubmitting(true);
 
   try {
-    const firstName = data.name.trim().split(" ")[0];
-
-    // 🔍 Chamada ao backend para classificar gênero
-const generoRes = await fetch("http://localhost:3000/api/classificar-genero", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ nome: firstName })
-});
-
-const generoData = await generoRes.json();
-const genero = generoData.genero || "";
 
     // Envia o lead para a ActiveCampaign
     await fetch("https://api-email-delta.vercel.app/api/activecampaign", {
@@ -68,13 +57,7 @@ const genero = generoData.genero || "";
       description: "Não feche essa página."
     });
 
-    // Redireciona para /salvando com nome e gênero
-    navigate("/salvando", {
-      state: {
-        nome: data.name,
-        genero
-      }
-    });
+   
 
   } catch (error) {
     console.error("Erro no envio:", error);
