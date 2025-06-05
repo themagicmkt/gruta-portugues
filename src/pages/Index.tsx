@@ -53,7 +53,7 @@ const Index = () => {
   localStorage.setItem("paragrafo", gptData.paragrafo);
 
     toast({
-      title: "Oração recebida",
+      title: "✉️ Oração recebida",
       description: "Não feche essa página."
     });
 
