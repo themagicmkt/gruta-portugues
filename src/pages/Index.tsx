@@ -57,7 +57,12 @@ const Index = () => {
       description: "Não feche essa página."
     });
 
-   
+    // Redireciona para /salvando com nome e gênero
+    navigate("/salvando", {
+      state: {
+        nome: data.name,
+      }
+    });
 
   } catch (error) {
     console.error("Erro no envio:", error);
