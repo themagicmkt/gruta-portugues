@@ -25,49 +25,65 @@ const Index = () => {
   setIsSubmitting(true);
 
   try {
+    const firstName = data.name.trim().split(" ")[0];
+
+    // 🔍 Chamada ao backend para classificar gênero
+const generoRes = await fetch("http://localhost:3000/api/classificar-genero", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ nome: firstName })
+});
+
+const generoData = await generoRes.json();
+const genero = generoData.genero || "";
+
+    // Envia o lead para a ActiveCampaign
     await fetch("https://api-email-delta.vercel.app/api/activecampaign", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: data.name,
         email: data.email,
-        prayer: data.prayer // ← ESSENCIAL
+        prayer: data.prayer
       })
     });
 
-     // 🔥 Nova chamada para gerar headline e parágrafo
-  const res = await fetch("https://api-sellpage.vercel.app/api/generate", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: data.name,
-      email: data.email,
-      prayer: data.prayer
-    })
-  });
+    // Gera headline e parágrafo
+    const gptRes = await fetch("https://api-sellpage.vercel.app/api/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        prayer: data.prayer
+      })
+    });
 
-  const gptData = await res.json();
-  localStorage.setItem("headline", gptData.headline);
-  localStorage.setItem("paragrafo", gptData.paragrafo);
+    const gptData = await gptRes.json();
+    localStorage.setItem("headline", gptData.headline);
+    localStorage.setItem("paragrafo", gptData.paragrafo);
 
     toast({
-      title: "✉️ Oração recebida",
+      title: "Oração recebida",
       description: "Não feche essa página."
     });
 
-    setTimeout(() => {
-      navigate("/salvando", { state: { nome: data.name } });
-      setIsSubmitting(false);
-    }, 1500);
+    // Redireciona para /salvando com nome e gênero
+    navigate("/salvando", {
+      state: {
+        nome: data.name,
+        genero
+      }
+    });
+
   } catch (error) {
-    console.error("Erro ao enviar para ActiveCampaign", error);
+    console.error("Erro no envio:", error);
     toast({
       title: "Erro",
-      description: "Não foi possível enviar sua oração. Tente novamente.",
+      description: "Algo deu errado. Tente novamente.",
       variant: "destructive"
     });
+  } finally {
     setIsSubmitting(false);
   }
 };

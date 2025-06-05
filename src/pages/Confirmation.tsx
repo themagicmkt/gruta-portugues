@@ -215,7 +215,7 @@ const Confirmation = () => {
         <section className="py-16 px-2 sm:px-4 bg-blue-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
-              {firstName}, está {prontx} para sentir o poder curador de Lourdes?
+              {firstName}, está pronta para sentir o poder curador de Lourdes?
             </h3>
             
             <div className="flex flex-col gap-8">

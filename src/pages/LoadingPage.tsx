@@ -5,15 +5,18 @@ import { Loader } from "lucide-react";
 const LoadingPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const nome = location.state?.nome || "devoto(a)";
+  const state = location.state as { nome?: string; genero?: string } | null;
+
+  const nome = state?.nome || "devoto(a)";
+  const genero = state?.genero || "";
 
   useEffect(() => {
     const redirectTimer = setTimeout(() => {
-      navigate("/confirmacao", { state: { nome } });
+      navigate("/confirmacao", { state: { nome, genero } });
     }, 4000);
 
     return () => clearTimeout(redirectTimer);
-  }, [navigate, nome]);
+  }, [navigate, nome, genero]);
 
   return (
     <div className="min-h-screen bg-blue-50 flex flex-col items-center justify-center text-center px-4">
