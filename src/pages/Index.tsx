@@ -171,7 +171,7 @@ const Index = () => {
         <section id="formulario" className="py-16 px-2 sm:px-4 bg-blue-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg sm:max-w-2xl">
             <h3 className="text-3xl font-playfair font-semibold mb-10 text-center text-[#333333]">
-              Envie sua oração ao Santuário de Aparecida
+              Envie sua oração a Gruta de lourdes
             </h3>
             <Card className="w-full border-[#5f9ea0]/30 shadow-lg">
               <CardContent className="p-8">
