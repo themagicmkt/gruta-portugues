@@ -15,7 +15,7 @@ const Confirmation = () => {
   const location = useLocation();
   const state = location.state as { nome?: string; genero?: string } | null;
 
-  const nomeCompleto = state?.nome || "devoto(a)";
+  const nomeCompleto = state?.nome || "irmã";
   const genero = state?.genero || ""; // ✅ agora declarado corretamente
 
   const primeiroNome = nomeCompleto.split(" ")[0];
@@ -72,12 +72,12 @@ const Confirmation = () => {
     </h2>
 
     {/* Frase de alerta logo abaixo */}
-    <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-900 p-4 rounded-md mt-6">
-  <p className="text-lg font-medium">
-    Sua oração foi recebida com fé, mas ainda <strong className="text-blue-700">não foi entregue</strong>.
-    Siga até o final da página para <strong className="text-blue-700">concluir esse gesto sagrado</strong>.
-  </p>
-</div>
+    <div className="bg-[#5f9ea0]/10 border-l-4 border-[#5f9ea0] text-[#22505a] p-4 rounded-md mt-6">
+      <p className="text-lg font-medium">
+      Sua oração foi recebida com fé, mas ainda <strong className="text-[#5f9ea0]">não foi entregue</strong>.
+      Siga até o final da página para <strong className="text-[#5f9ea0]">concluir esse gesto sagrado</strong>.
+      </p>
+    </div>
   </div>
 </section>
         
