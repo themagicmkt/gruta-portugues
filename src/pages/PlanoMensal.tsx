@@ -26,7 +26,7 @@ const PlanoMensal = () => {
       <div className="w-full max-w-4xl space-y-8">
         {/* Título principal */}
         <h1 className="text-4xl font-extrabold text-center text-pink-700">
-          ⚠️ Atenção: Oração Especial para você...
+          Você foi escolhido para essa Oferta Especial...
         </h1>
 
         {/* Descrição inicial */}
@@ -66,26 +66,27 @@ const PlanoMensal = () => {
 
         {/* Preço */}
         <div className="text-center">
-          <p className="text-2xl text-pink-600 font-semibold">Apenas R$9,90/mês</p>
-          <p className="text-sm text-gray-500">Cancele quando quiser</p>
+          
         </div>
 
         {/* CTA */}
         <div className="flex flex-col items-center space-y-4">
-          <button
-            id="cta-button"
-            onClick={handleUpsellAccept}
-            className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded shadow-md transition duration-200 w-full max-w-xs"
-          >
-            Quero receber orações todos os meses 🙏
-          </button>
+            <a
+              id="cta-button"
+              href="https://pay.hotmart.com/O96162158H?off=grogj2y9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded shadow-md transition duration-200 w-full max-w-xs flex items-center justify-center text-center"
+            >
+              Quero receber orações todos os meses 🙏
+            </a>
 
-          <button
+            <button
             onClick={handleUpsellDecline}
             className="text-sm text-gray-500 hover:text-gray-700 underline"
-          >
+            >
             Não, obrigado. Prefiro não receber orações mensais.
-          </button>
+            </button>
         </div>
       </div>
     </div>
