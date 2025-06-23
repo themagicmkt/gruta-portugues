@@ -9,7 +9,7 @@ import Confirmation from "./pages/Confirmation";
 import LoadingPage from "./pages/LoadingPage";
 import AdminPanel from "./pages/AdminPanel";
 import Index from "./pages/Index";
-
+import PlanoMensal from "./pages/PlanoMensal";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -22,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/salvando" element={<LoadingPage />} />
           <Route path="/confirmacao" element={<Confirmation />} />
+          <Route path="/plano-mensal" element={<PlanoMensal />} />
           <Route path="/admin" element={<AdminPanel />} /> 
           <Route path="*" element={<NotFound />} />
         </Routes>
