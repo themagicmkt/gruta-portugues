@@ -11,6 +11,10 @@ import AdminPanel from "./pages/AdminPanel";
 import Index from "./pages/Index";
 import PlanoMensal from "./pages/PlanoMensal";
 const queryClient = new QueryClient();
+import TermsOfUse from "./pages/TermsOfUse";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -24,6 +28,9 @@ const App = () => (
           <Route path="/confirmacao" element={<Confirmation />} />
           <Route path="/plano-mensal" element={<PlanoMensal />} />
           <Route path="/admin" element={<AdminPanel />} /> 
+          <Route path="/termos-de-uso" element={<TermsOfUse />} />
+          <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
+          {/* Catch-all route for 404 Not Found */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
